@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap');
+
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: var(--main-font);
+       text-decoration: none !important;
+       list-style: none !important;
+       border: none !important;
+       outline: none !important;
+       scroll-behavior: smooth !important;
+}
+
+:root {
+       --main-clr: #1883a7;
+       --second-clr: #C69774;
+       --hover-clr: #4e7181;
+       --main-font: 'Almarai', sans-serif;
+       --fw300: 300;
+       --fw400: 400;
+       --fw700: 700;
+}
+
+body {
+       background-color: #efefef !important;
+}
+
+body::-webkit-scrollbar {
+       width: 0.4rem;
+}
+
+body::-webkit-scrollbar-track {
+       background-color: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+       background-color: var(--main-clr);
+       border-radius: 10px;
+       outline: 1px solid slategrey;
+}
+
+/* Responsive Customize Page */
+
+@media (max-width:767px) {}
+
+@media (min-width:990px) {}
+
+@media (min-width:1400px) {}
