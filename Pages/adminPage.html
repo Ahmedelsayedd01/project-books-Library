@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="icon" href="../Assets/logoBook3.png" />
     <link rel="stylesheet" href="../Styles/adminPage.css" />
 
     <!-- Icons Library  -->
@@ -41,7 +42,7 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <title>Home Page</title>
+    <title>library books</title>
   </head>
   <body>
     <div class="containerr">
@@ -119,7 +120,7 @@
                     <input
                       type="text"
                       class="input_model"
-                      name="add_book_name"
+                      name="book_name"
                       id="add_book_name"
                       placeholder="اسم الكتاب"
                       required
@@ -127,7 +128,7 @@
                     <input
                       type="text"
                       class="input_model"
-                      name="add_book_who"
+                      name="book_who"
                       id="add_book_who"
                       placeholder="اسم صاحب الكتاب"
                       required
@@ -137,33 +138,33 @@
                       rows="3"
                       type="text"
                       class="input_model"
-                      name="add_book_disc"
+                      name="book_disc"
                       id="add_book_disc"
                       style="height: auto !important; padding: 10px 30px"
                       placeholder="اضافة نفاصيل عن الكتاب"
                       required
                     ></textarea>
                     <div class="add_image">
-                      <label for="#add_book_image" class="col-md-4"
+                      <label for="add_book_image" class="col-md-4"
                         >اضف صورة للكتاب :</label
                       >
                       <input
                         type="file"
                         class="input_model col-md-7"
-                        name="add_book_image"
+                        name="book_image"
                         id="add_book_image"
                         accept="image/gif, image/jpeg"
                         required
                       />
                     </div>
                     <div class="add_audio">
-                      <label for="#" class="col-md-4"
+                      <label for="add_book_audio" class="col-md-4"
                         >اضف ملف صوتى للكتاب :</label
                       >
                       <input
                         type="file"
                         class="input_model col-md-7"
-                        name="add_book_audio"
+                        name="book_audio"
                         id="add_book_audio"
                         accept="audio/mp3,audio/*;capture=microphone"
                         required
@@ -187,7 +188,7 @@
                     >
                       الغاء
                     </button>
-                    <button type="submit" class="col-md-5" id="add_book_btn">
+                    <button type="submit" class="col-md-5" id="add_book_new">
                       أضافة الكتاب
                     </button>
                   </div>
@@ -229,6 +230,10 @@
                   <span class="book_who">:by<strong>إبراهيم عيسى</strong></span>
                 </div>
               </div>
+              <div class="overlay">
+                <i class="fa-solid fa-eye"></i>
+                <span class="count_view">5555</span>
+              </div>
             </a>
             <!-- ################# -->
             <a href="./bookPage.html" target="_blank">
@@ -246,6 +251,10 @@
                   <span class="book_name">28 حرف</span>
                   <span class="book_who">:by<strong>أحمد حلمي</strong></span>
                 </div>
+              </div>
+              <div class="overlay">
+                <i class="fa-solid fa-eye"></i>
+                <span class="count_view">21321</span>
               </div>
             </a>
             <!-- ################# -->
@@ -265,6 +274,10 @@
                   <span class="book_who">:by<strong>جلال عام</strong></span>
                 </div>
               </div>
+              <div class="overlay">
+                <i class="fa-solid fa-eye"></i>
+                <span class="count_view">35322</span>
+              </div>
             </a>
             <!-- ################# -->
             <a href="./bookPage.html" target="_blank">
@@ -282,6 +295,10 @@
                   <span class="book_name">الفيل الأزرق</span>
                   <span class="book_who">:by<strong>أحمد مراد</strong></span>
                 </div>
+              </div>
+              <div class="overlay">
+                <i class="fa-solid fa-eye"></i>
+                <span class="count_view">32312</span>
               </div>
             </a>
             <!-- ################# -->
@@ -301,6 +318,10 @@
                   <span class="book_who">:by<strong>أحمد مراد</strong></span>
                 </div>
               </div>
+              <div class="overlay">
+                <i class="fa-solid fa-eye"></i>
+                <span class="count_view">3121</span>
+              </div>
             </a>
             <!-- ################# -->
             <a href="./bookPage.html" target="_blank">
@@ -318,6 +339,10 @@
                   <span class="book_name">عزازيل</span>
                   <span class="book_who">:by<strong>يوسف زيدان</strong></span>
                 </div>
+              </div>
+              <div class="overlay">
+                <i class="fa-solid fa-eye"></i>
+                <span class="count_view">212135</span>
               </div>
             </a>
             <!-- ################# -->
@@ -339,6 +364,10 @@
                   >
                 </div>
               </div>
+              <div class="overlay">
+                <i class="fa-solid fa-eye"></i>
+                <span class="count_view">8795</span>
+              </div>
             </a>
             <!-- ################# -->
             <a href="./bookPage.html" target="_blank">
@@ -357,6 +386,10 @@
                   <span class="book_who">:by<strong>صلاح جاهين</strong></span>
                 </div>
               </div>
+              <div class="overlay">
+                <i class="fa-solid fa-eye"></i>
+                <span class="count_view">3562</span>
+              </div>
             </a>
             <!-- ################# -->
             <a href="./bookPage.html" target="_blank">
@@ -374,6 +407,10 @@
                   <span class="book_name">أولاد حارتنا</span>
                   <span class="book_who">:by<strong>نجيب محفوظ</strong></span>
                 </div>
+              </div>
+              <div class="overlay">
+                <i class="fa-solid fa-eye"></i>
+                <span class="count_view">4963</span>
               </div>
             </a>
             <!-- ################# -->
@@ -395,6 +432,10 @@
                   >
                 </div>
               </div>
+              <div class="overlay">
+                <i class="fa-solid fa-eye"></i>
+                <span class="count_view">45465</span>
+              </div>
             </a>
             <!-- ################# -->
           </div>
@@ -402,5 +443,46 @@
       </main>
     </div>
     <script src="../Scripts/homePage.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#add_book_new").click(function () {
+          var BookName = $("#add_book_name").val();
+          var BookWho = $("#add_book_who").val();
+          var BookDisc = $("#add_book_disc").val();
+          var BookImage = $("#add_book_image")[0].files[0];
+          var BookAudio = $("#add_book_audio")[0].files[0];
+
+          var NewBook_Obj = {
+            book_name: BookName,
+            book_who: BookWho,
+            book_disc: BookDisc,
+            book_image: BookImage,
+            book_audio: BookAudio,
+          };
+          console.log(NewBook_Obj);
+
+          // $.ajaxSetup({
+          //   headers: {
+          //     // "CSRF-TOKEN": $("#admin_token").val(),
+          //   },
+          // });
+          // $.ajax({
+          //   type: "POST",
+          //   url: "",
+          //   data: NewBook_Obj,
+          //   processData: false,
+          //   contentType: false,
+          //   dataType: "json",
+          //   success: function (data, status, jqXHR) {
+          //     alert("success");
+          //   },
+          //   error: function (data, jqXHR, status) {
+          //     alert("fail" + status.code);
+          //   },
+          // });
+
+        });
+      });
+    </script>
   </body>
 </html>
