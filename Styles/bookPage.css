@@ -136,10 +136,26 @@ body::-webkit-scrollbar-thumb {
        text-align: right;
 }
 
+.containerr main .main_wrapper .content_side .overlay {
+       display: flex;
+       align-items: center;
+       justify-content: flex-start;
+       column-gap: 10px;
+       font-size: 1.3rem;
+       text-align: right;
+}
+
+.containerr main .main_wrapper .content_side .overlay>.count {
+       font-size: 1.5rem;
+       letter-spacing: 1px;
+}
+
 .containerr main .main_wrapper .content_side .book_name>strong,
 .containerr main .main_wrapper .content_side .book_who>strong,
-.containerr main .main_wrapper .content_side .book_disc>strong {
+.containerr main .main_wrapper .content_side .book_disc>strong,
+.containerr main .main_wrapper .content_side .overlay>strong {
        color: #34424e;
+       font-size: 1.5rem;
 }
 
 .containerr main .main_wrapper .content_side .book_audio {
@@ -176,8 +192,8 @@ body::-webkit-scrollbar-thumb {
        }
 
        .containerr main .main_wrapper .content_side {
-              width: calc((650px + 15px)- 100%);
-              height: 70%;
+              width: 100%;
+              height: 80%;
               align-items: flex-start;
               row-gap: 15px;
               overflow: hidden;
