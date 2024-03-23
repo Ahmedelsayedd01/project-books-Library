@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap');
+
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: var(--main-font);
+       text-decoration: none !important;
+       list-style: none !important;
+       border: none !important;
+       outline: none !important;
+       scroll-behavior: smooth !important;
+}
+
+:root {
+       --main-clr: #1883a7;
+       --second-clr: #C69774;
+       --hover-clr: #4e7181;
+       --main-font: 'Almarai', sans-serif;
+       --fw300: 300;
+       --fw400: 400;
+       --fw700: 700;
+}
+
+body {
+       background-color: #efefef !important;
+}
+
+body::-webkit-scrollbar {
+       width: 0.4rem;
+}
+
+body::-webkit-scrollbar-track {
+       background-color: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+       background-color: var(--main-clr);
+       border-radius: 10px;
+       outline: 1px solid slategrey;
+}
+
+.containerr {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+
+}
+
+.containerr nav {
+       position: sticky;
+       top: 0px;
+       z-index: 100;
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding: 10px;
+       column-gap: 10px;
+       background-color: #fff;
+       box-shadow: 0px 0px 4px 1px rgb(227 227 227 / 85%);
+}
+
+.containerr nav .logo {
+       width: 100px;
+       height: 80px;
+}
+
+.containerr nav .name_site {
+       font-size: 2rem;
+       font-weight: var(--fw700);
+       margin-top: -5px;
+}
+
+.containerr main {
+       width: 100%;
+       /* height: 87vh; */
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       /* overflow: hidden; */
+       background: #2C3E50;
+       /* fallback for old browsers */
+       background: -webkit-linear-gradient(300deg, #4CA1AF, #2C3E50);
+       /* Chrome 10-25, Safari 5.1-6 */
+       background: linear-gradient(300deg, #4CA1AF, #2C3E50);
+       /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.containerr main .main_wrapper {
+       width: 90%;
+       height: 100%;
+       padding: 20px 0;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       row-gap: 15px;
+       /* background-color: red; */
+}
+
+.containerr main .main_wrapper .img_side {
+       width: 400px;
+       height: 600px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       border-radius: 20px;
+       border: 4px solid #01a3bb !important;
+       overflow: hidden;
+}
+
+.containerr main .main_wrapper .img_side .book_img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       object-position: center;
+}
+
+.containerr main .main_wrapper .content_side {
+       width: 100%;
+       color: #fff;
+       padding: 0 10px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       row-gap: 8px;
+}
+
+
+.containerr main .main_wrapper .content_side .book_name,
+.containerr main .main_wrapper .content_side .book_who,
+.containerr main .main_wrapper .content_side .book_disc {
+       font-size: 1.3rem;
+       text-align: right;
+}
+
+.containerr main .main_wrapper .content_side .overlay {
+       display: flex;
+       align-items: center;
+       justify-content: flex-start;
+       column-gap: 10px;
+       font-size: 1.3rem;
+       text-align: right;
+}
+
+.containerr main .main_wrapper .content_side .overlay>.count {
+       font-size: 1.5rem;
+       letter-spacing: 1px;
+}
+
+.containerr main .main_wrapper .content_side .book_name>strong,
+.containerr main .main_wrapper .content_side .book_who>strong,
+.containerr main .main_wrapper .content_side .book_disc>strong,
+.containerr main .main_wrapper .content_side .overlay>strong {
+       color: #34424e;
+       font-size: 1.5rem;
+}
+
+.containerr main .main_wrapper .content_side .book_audio {
+       margin-top: 10px;
+}
+
+
+/* Responsive Customize Page */
+
+@media (max-width:767px) {}
+
+@media (min-width:990px) {
+       .containerr main {
+              height: 87vh;
+              overflow: hidden;
+              background: #2C3E50;
+              /* fallback for old browsers */
+              background: -webkit-linear-gradient(120deg, #4CA1AF, #2C3E50);
+              /* Chrome 10-25, Safari 5.1-6 */
+              background: linear-gradient(120deg, #4CA1AF, #2C3E50);
+              /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+       }
+
+       .containerr main .main_wrapper {
+              flex-direction: row;
+              align-items: center;
+              column-gap: 15px;
+       }
+
+       .containerr main .main_wrapper .img_side {
+              width: 650px;
+              height: 100%;
+       }
+
+       .containerr main .main_wrapper .content_side {
+              width: 100%;
+              height: 80%;
+              align-items: flex-start;
+              row-gap: 15px;
+              overflow: hidden;
+       }
+
+
+       .containerr main .main_wrapper .content_side .book_name,
+       .containerr main .main_wrapper .content_side .book_who,
+       .containerr main .main_wrapper .content_side .book_disc {
+              font-size: 1.4rem;
+              text-align: right;
+              word-spacing: 5px;
+              line-height: 33px;
+       }
+
+       .containerr main .main_wrapper .content_side .book_disc {
+              width: 100%;
+              height: 230px;
+              overflow: hidden;
+       }
+
+       .containerr main .main_wrapper .content_side .book_audio {
+              margin-top: 20px;
+              width: 100%;
+       }
+}
+
+
+@media (min-width:1400px) {}
