@@ -36,7 +36,8 @@
             <div class="content_side">
                 <div class="wrapper_contentSide">
                     <!-- SignUP Form -->
-                    <form action="" class="" id="signFace_form" method="POST">
+                    <form action="project-books-Library\includes\functions\regestration.php" class="" id="signFace_form"
+                        method="POST">
                         <div class="signFace">
                             <!-- User First Name && Last Name -->
                             <div class="userName">
