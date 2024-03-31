@@ -95,23 +95,24 @@ $(document).ready(function () {
   /* ########### SignUp Face ########### */
   /* Submit user from SignIn */
   $("#signUP_btn").click(function (e) {
-    e.preventDefault();
+    
     /* Form SingUp */
     var first_Name = $("#first_name").val();
     var last_Name = $("#last_name").val();
     var userEmail = $("#user_email").val();
     var userPhone = $("#user_phone").val();
     var userPassword = $("#user_password").val();
-
     /* Firs Name Vaildation*/
     if (first_Name == "") {
       $("#fn_vaild").removeClass("d-none");
+      e.preventDefault();
     } else {
       $("#fn_vaild").addClass("d-none");
     }
     /* Last Name Vaildation*/
     if (last_Name == "") {
       $("#ln_vaild").removeClass("d-none");
+      
     } else {
       $("#ln_vaild").addClass("d-none");
     }

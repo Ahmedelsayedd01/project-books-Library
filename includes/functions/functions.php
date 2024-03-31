@@ -99,7 +99,7 @@ function redirectHome($theErrorMsg, $url = null, $seconds = 3)
         if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] !== '') {
             $url = $_SERVER['HTTP_REFERER'];
         } else {
-            $url = 'index.php';
+            $url = '../../Pages/index.php';
         }
     }
     echo $theErrorMsg;

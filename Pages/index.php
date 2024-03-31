@@ -36,8 +36,8 @@
             <div class="content_side">
                 <div class="wrapper_contentSide">
                     <!-- SignUP Form -->
-                    <form action="project-books-Library\includes\functions\regestration.php" class="" id="signFace_form"
-                        method="POST">
+                    <form action="..\includes\functions\regestration.php" enctype="multipart/form-data"
+                        id="signFace_form" method="POST">
                         <div class="signFace">
                             <!-- User First Name && Last Name -->
                             <div class="userName">
@@ -109,7 +109,7 @@
                             <!-- Footer Login Form -->
                             <div class="footer_login">
                                 <button type="submit" id="login_btn">تسجيل الدخول</button>
-                                <span>انشاء حساب جديد الان .<span id="signUp_txBtn">
+                                <span type='submit'>انشاء حساب جديد الان .<span id="signUp_txBtn">
                                         سجل الان</span></span>
                             </div>
                         </div>
