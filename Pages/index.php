@@ -86,7 +86,7 @@
                         </div>
                     </form>
                     <!-- Login Form -->
-                    <form action="" class="d-none" id="loginFace_form" method="POST">
+                    <form action="..\includes\functions\login.php" class="d-none" id="loginFace_form" method="POST">
                         <div class="loginFace">
                             <!-- User Email -->
                             <div class="userEmailLogin">
@@ -94,11 +94,14 @@
                                     placeholder="عنوان البريد الالكترونى" />
                                 <span class="d-none" id="email_vaild_login">ادخل علامة "@" بعد اسم البريد
                                     الالكترونى</span>
+                                <span id="email_vaild_login"><?php if (isset($error['faild'])) {
+                                    echo $error['faild'];} ?>
+                                </span>
                             </div>
                             <!-- User Password -->
                             <div class="userPasswordLogin">
-                                <input type="password" class="input" id="user_password_login" minlength="8"
-                                    placeholder="كلمة السر" />
+                                <input type="password" name="password" class="input" id="user_password_login"
+                                    minlength="8" placeholder="كلمة السر" />
                                 <span class="d-none" id="pass_vaild_login">ادخل كلمة السر التى تتكون من اكتر من 8
                                     ارقام</span>
                                 <!-- Icon To Show Password -->

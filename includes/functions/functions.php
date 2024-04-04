@@ -55,7 +55,14 @@ function checkedLogin($select, $from, $value, $email)
     return $data;
 
 }
-
+function selectAllData($select, $from)
+{
+global $con;
+$statement = $con->prepare("SELECT $select FROM $from ");
+$statement->execute();
+$data = $statement->fetchAll();
+return $data;
+}
 function selectData($select, $from, $check, $value)
 {
     global $con;
@@ -69,7 +76,8 @@ function selectData($select, $from, $check, $value)
 
 function stringCheck($nameCheck)
 {
-    return htmlspecialchars(strip_tags(trim($nameCheck)));
+    htmlspecialchars(strip_tags(trim($nameCheck)));
+    return $nameCheck;
 }
 
 
@@ -111,4 +119,16 @@ function redirectHome($theErrorMsg, $url = null, $seconds = 3)
     exit();
 }
 ;
+
+
+            // This new function with session flash 
+
+            function sessionFlash($name,$message){
+    session_start(); // Start Session 
+   $_SESSION[$name] = $message; // Start Set Value From Session 
+   if(isset( $_SESSION[$name])){
+        return $_SESSION[$name] ;
+                // When Display Session Make Unset Delete This Session
+   } // Return 'Session'
+}
 //  Function Redirect If user Have Error in any Thing

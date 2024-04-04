@@ -151,11 +151,13 @@ $(document).ready(function () {
   /* ########### Login Face ########### */
   /* Submit user from Login */
   $("#login_btn").click((e) => {
-    e.preventDefault();
     /* User Email Vaildation in Login*/
     if ($("#user_email_login").val().includes("@")) {
+
       $("#email_vaild_login").addClass("d-none");
     } else {
+    e.preventDefault();
+
       $("#email_vaild_login").removeClass("d-none");
     }
     /* User Password Vaildation in Login*/
@@ -165,6 +167,7 @@ $(document).ready(function () {
     ) {
       $("#pass_vaild_login").removeClass("d-none");
     } else {
+
       $("#pass_vaild_login").addClass("d-none");
     }
   });
