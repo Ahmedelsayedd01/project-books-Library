@@ -5,7 +5,7 @@ if (!isset($_SESSION['user'])) {
   header("Location:index.php");
 }else{
   
-  $fullName = $_SESSION['user']['first_name'] . ' ' . ' ' . $_SESSION['user']['last_name'];
+  $fullName = $_SESSION['user'][0]['first_name'] . ' ' . ' ' . $_SESSION['user'][0]['last_name'];
 }
 ?>
 <!DOCTYPE html>

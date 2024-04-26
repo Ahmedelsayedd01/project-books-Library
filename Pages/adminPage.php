@@ -5,9 +5,11 @@ session_start();
 if (!isset($_SESSION['user'])) {
 
 header("Location:index.php");
+
+
 }else{
 
-$fullName = $_SESSION['user']['first_name'] . ' ' . ' ' . $_SESSION['user']['last_name'];
+$fullName = $_SESSION['user'][0]['first_name'] . ' ' . ' ' . $_SESSION['user'][0]['last_name'];
 }
 
 ?>
@@ -62,7 +64,7 @@ $fullName = $_SESSION['user']['first_name'] . ' ' . ' ' . $_SESSION['user']['las
           <button type="button" id="add_book_btn" data-toggle="modal" data-target="#book_model">
             أضافة كتاب جديد
           </button>
-          <button type="button" class="input">تسجيل الخروج</button>
+          <a type="button" href="../includes/functions/loguot.php" class="input">تسجيل الخروج</a>
         </div>
         <!-- Model To Add Book From Admin -->
         <!-- Modal -->
@@ -346,14 +348,14 @@ $fullName = $_SESSION['user']['first_name'] . ' ' . ' ' . $_SESSION['user']['las
 
       });
       $.getJSON({
-        type: "get",
+        type: "GET",
         url: "../includes/functions/userApi.php",
         // data: NewBook_Obj,
         // processData: false,
         // contentType: false,
         // dataType: "json",
         success: function (data, status, jqXHR) {
-          console.log(data.userAdmin[0]);
+          console.log(data);
         },
         error: function (data, jqXHR, status) {
           alert("fail" + status.code);

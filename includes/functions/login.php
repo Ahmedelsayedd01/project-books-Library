@@ -6,7 +6,6 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include 'functions.php';
     session_start();
-    print_r($_POST);
 
     $email = stringCheck($_POST['user_email_login']);
     $password = md5($_POST['password']);
@@ -28,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               $tablePassword = $checkAccount['password'];
             if ($password == $tablePassword) {
 
-            print_r($_SESSION['user'] = $checkAccount);
+            $_SESSION['user'] = [$checkAccount];
             header('Location:../../pages/adminPage.php');
             }
         }
