@@ -24,15 +24,21 @@ if (!isset($_SESSION['user'])) {
   <!-- Icons Library  -->
   <script src="https://kit.fontawesome.com/bbda8ae88d.js" crossorigin="anonymous"></script>
   <!-- Bootstrap Library  -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
   <!-- Jquery Library  -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <title>library books</title>
 </head>
@@ -60,7 +66,8 @@ if (!isset($_SESSION['user'])) {
         </div>
         <!-- Model To Add Book From Admin -->
         <!-- Modal -->
-        <div class="modal fade" id="book_model" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="book_model" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header" style="
@@ -70,23 +77,30 @@ if (!isset($_SESSION['user'])) {
                 <h5 class="modal-title" id="exampleModalLongTitle" style="font-size: 1.8rem !important">
                   تفاصيل الكتاب
                 </h5>
-                <button type="button" class="close" style="background-color: transparent" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" style="background-color: transparent" data-dismiss="modal"
+                  aria-label="Close">
                   <span aria-hidden="true" style="font-size: 3rem">&times;</span>
                 </button>
               </div>
               <!-- Details Book -->
               <form action="..\includes\functions\newBook.php" method="post" enctype="multipart/form-data">
                 <div class="modal-body" style="display: flex; flex-direction: column; row-gap: 15px">
-                  <input type="text" class="input_model" name="book_name" id="add_book_name" placeholder="اسم الكتاب" required />
-                  <input type="text" class="input_model" name="book_who" id="add_book_who" placeholder="اسم صاحب الكتاب" required />
-                  <textarea cols="5" rows="3" type="text" class="input_model" name="book_disc" id="add_book_disc" style="height: auto !important; padding: 10px 30px" placeholder="اضافة نفاصيل عن الكتاب" required></textarea>
+                  <input type="text" class="input_model" name="book_name" id="add_book_name" placeholder="اسم الكتاب"
+                    required />
+                  <input type="text" class="input_model" name="book_who" id="add_book_who" placeholder="اسم صاحب الكتاب"
+                    required />
+                  <textarea cols="5" rows="3" type="text" class="input_model" name="book_disc" id="add_book_disc"
+                    style="height: auto !important; padding: 10px 30px" placeholder="اضافة نفاصيل عن الكتاب"
+                    required></textarea>
                   <div class="add_image">
                     <label for="add_book_image" class="col-md-4">اضف صورة للكتاب :</label>
-                    <input type="file" class="input_model col-md-7" name="book_image" id="add_book_image" accept="image/gif, image/jpeg" required />
+                    <input type="file" class="input_model col-md-7" name="book_image" id="add_book_image"
+                      accept="image/gif, image/jpeg" required />
                   </div>
                   <div class="add_audio">
                     <label for="add_book_audio" class="col-md-4">اضف ملف صوتى للكتاب :</label>
-                    <input type="file" class="input_model col-md-7" name="book_audio" id="add_book_audio" accept="audio/mp3,audio/*;capture=microphone" required />
+                    <input type="file" class="input_model col-md-7" name="book_audio" id="add_book_audio"
+                      accept="audio/mp3,audio/*;capture=microphone" required />
                   </div>
                 </div>
 
@@ -306,8 +320,8 @@ if (!isset($_SESSION['user'])) {
   </div>
   <script src="../Scripts/homePage.js"></script>
   <script>
-    $(document).ready(function() {
-      $("#add_book_new").click(function() {
+    $(document).ready(function () {
+      $("#add_book_new").click(function () {
         var BookName = $("#add_book_name").val();
         var BookWho = $("#add_book_who").val();
         var BookDisc = $("#add_book_disc").val();
@@ -334,7 +348,7 @@ if (!isset($_SESSION['user'])) {
       $.getJSON({
         type: "GET",
         url: "../includes/functions/userApi.php",
-        success: function(data) {
+        success: function (data) {
           console.log(data);
           var books = data.bookAdmin;
           $(books).each((val, ele) => {
@@ -343,7 +357,7 @@ if (!isset($_SESSION['user'])) {
             var newBook = `<a href="./bookPage.php?id=${ele.id}" target="_blank">
                             <div class="book">
                               <div class="img_book">
-                                <img class="book_cover" src="../Assets/${ele.image_book}" alt="book" />
+                                <img class="book_cover" src="../Assets/imageUser/${ele.image_book}" alt="book" />
                               </div>
                               <div class="content_book">
                                 <span class="book_name">${ele.bookName}</span>
@@ -358,7 +372,7 @@ if (!isset($_SESSION['user'])) {
             $(".books").append(newBook);
           })
         },
-        error: function(data) {
+        error: function (data) {
           alert("fail" + status.code);
         },
       });

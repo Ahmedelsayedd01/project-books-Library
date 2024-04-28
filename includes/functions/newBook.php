@@ -1,4 +1,5 @@
 <?php
+     session_start();
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 include "functions.php";
@@ -75,19 +76,30 @@ include "functions.php";
      } else { // If The Name of Image Is Empty 
           $error = 'please Choose Image';
      }
-
-
+     $user_id = $_SESSION['user'][0]['id'];
      $dataArray = [
                'bookName'=>$bookName,
                'bookDetails'=>$book_desc,
                'image_book'=>$image_name,
                'book_audio'=>$new_name,
                'author'=>$auther_book,
+               'user_id'=>$user_id,
      ];
-     $bookInsert  = insertQuery('books',$dataArray);
+
+     try {
+     $bookInsert = insertQuery('books',$dataArray);
+     } catch (PDOException $th) {
+           session_start();
+           sessionFlash('success','Book Not Inserted');
+           header('Location:../../pages/adminPage.php');
+     }
           if($bookInsert){
           session_start();
                sessionFlash('success','book Insert Successfully');
            header('Location:../../pages/adminPage.php');
+          }else{
+                  session_start();
+                  sessionFlash('success','Book Not Inserted');
+                  header('Location:../../pages/adminPage.php');
           }
 }

@@ -71,6 +71,14 @@ function selectData($select, $from, $check, $value)
     $data = $statement->fetchAll();
     return  $data;
 }
+function selectOne($select, $from, $check, $value)
+{
+    global $con;
+    $statement = $con->prepare("SELECT $select FROM $from WHERE $check =?");
+    $statement->execute(array($value));
+    $data = $statement->fetch();
+    return  $data;
+}
 
 
 
