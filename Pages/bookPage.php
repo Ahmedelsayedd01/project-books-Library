@@ -55,7 +55,7 @@ header("Location:index.php");
     <main>
       <div class="main_wrapper">
         <div class="img_side">
-          <img class="book_img" src="../Assets/imageUser/" alt="Book" />
+          <img class="book_img" src="../Assets/imageUser/<?php echo $bookAdmin['image_book']?>" alt="Book" />
         </div>
         <div class="content_side">
           <div class="book_name">
